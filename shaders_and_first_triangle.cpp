@@ -9,6 +9,8 @@ const GLint WIDTH = 800, HEIGHT = 600;
 
 GLuint VAO, VBO, shader;
 
+// Vertex Shader
+
 void CreateTriangle()
 {
     GLfloat vertices[] = {
