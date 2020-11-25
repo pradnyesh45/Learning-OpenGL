@@ -100,8 +100,8 @@ void Football_Field(void)
     glEnd();
 }
 
-float x_position = 0.37;
-float y_position = 0.73;
+float x_position = 0.5;
+float y_position = 0.5;
 
 void Moving_Ball(void)
 {
@@ -118,29 +118,29 @@ void Moving_Ball(void)
     glFlush();
 }
 
-void timer(int)
-{
-    glutPostRedisplay();
-    glutTimerFunc(1000 / 60, timer, 0);
+// void timer(int)
+// {
+//     glutPostRedisplay();
+//     glutTimerFunc(1000 / 60, timer, 0);
 
-    if (y_position > 0.37 && x_position == 0.37)
-    {
+//     if (y_position > 0.37 && x_position == 0.37)
+//     {
 
-        y_position -= 0.01;
-    }
-    else if (x_position < 0.73 && y_position == 0.37)
-    {
-        x_position += 0.01;
-    }
-    else if (y_position < 0.73 && x_position == 0.73)
-    {
-        y_position += 0.01;
-    }
-    else if (x_position > 0.37 && y_position == 0.37)
-    {
-        x_position -= 0.01;
-    }
-}
+//         y_position -= 0.01;
+//     }
+//     else if (x_position < 0.73 && y_position == 0.37)
+//     {
+//         x_position += 0.01;
+//     }
+//     else if (y_position < 0.73 && x_position == 0.73)
+//     {
+//         y_position += 0.01;
+//     }
+//     else if (x_position > 0.37 && y_position == 0.37)
+//     {
+//         x_position -= 0.01;
+//     }
+// }
 
 int main()
 {
@@ -176,7 +176,7 @@ int main()
         Football_Field();
         Moving_Ball();
 
-        glutTimerFunc(0, timer, 0);
+        // glutTimerFunc(0, timer, 0);
         glfwPollEvents();
         glfwSwapBuffers(window);
     }
