@@ -118,6 +118,64 @@ void Moving_Ball(void)
     glFlush();
 }
 
+// void keyboard(int button, int x, int y)
+// {
+//     switch (button)
+//     {
+//     case GLUT_KEY_F1:
+//         object = 0;
+//         break;
+//     case GLUT_KEY_F2:
+//         object = 1;
+//         break;
+//     case GLUT_KEY_LEFT:
+//         xmove[object] -= 0.1;
+//         break;
+//     case GLUT_KEY_RIGHT:
+//         xmove[object] += 0.1;
+//         break;
+//     case GLUT_KEY_DOWN:
+//         ymove[object] -= 0.1;
+//         break;
+//     case GLUT_KEY_UP:
+//         ymove[object] += 0.1;
+//         break;
+//     case GLUT_KEY_PAGE_UP:
+//         zmove[object] -= 0.1;
+//         break;
+//     case GLUT_KEY_PAGE_DOWN:
+//         zmove[object] += 0.1;
+//         break;
+//     }
+//     glutPostRedisplay();
+// }
+
+// void polygons(void)
+// {
+//     glPushMatrix();
+
+//     glColor3f(1.0, 0.0, 0.0);
+//     glRotatef(degree, 0.0, 1.0, 0.0);
+//     glScalef(xscale, yscale, zscale);
+//     glTranslatef(1.5, 0.0, -8.0);
+
+//     glTranslatef(xmove[0], ymove[0], zmove[0]); // <--- translate pyramid
+
+//     // draw pyramid
+//     glBegin(GL_TRIANGLES); //pyramid
+//     // [...]
+//     glEnd();
+
+//     glTranslatef(-1.5, 0.0, -8.0);
+//     glTranslatef(xmove[1], ymove[1], zmove[1]); // <--- translate cube
+
+//     glBegin(GL_QUADS); //cubic
+//     // [...]
+//     glEnd();
+
+//     glPopMatrix();
+// }
+
 // void timer(int)
 // {
 //     glutPostRedisplay();
